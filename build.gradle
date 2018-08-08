@@ -28,14 +28,17 @@ repositories {
 
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('org.flywaydb:flyway-core')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('org.springframework.boot:spring-boot-devtools')
-    compileOnly('org.projectlombok:lombok')
+	compile('org.springframework.security:spring-security-web')
+	compile('org.springframework.security:spring-security-config')
+	compile('org.flywaydb:flyway-core')
+	compileOnly('org.projectlombok:lombok')
 	runtime('mysql:mysql-connector-java')
+
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-    testCompile('io.rest-assured:rest-assured:3.1.0')
+	testCompile('io.rest-assured:rest-assured:3.1.0')
     testCompile('com.github.database-rider:rider-spring:1.2.9') {
         exclude group: 'org.slf4j', module: 'slf4j-simple'
     }
